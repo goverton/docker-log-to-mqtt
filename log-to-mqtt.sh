@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Unifi Video Vars
-UNIFI_MOTION_LOG=/logs/unifi-video/motion.log
+UNIFI_MOTION_LOG=/unifilogs/motion.log
 
 # MQTT Vars
 MQTT_SERVER="192.168.1.100"
