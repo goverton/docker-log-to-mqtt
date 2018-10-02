@@ -31,7 +31,7 @@ while inotifywait -e modify $UNIFI_MOTION_LOG; do
   LAST_CAM=`echo $LAST_MESSAGE | awk -F '[][]' '{print $2}'`
   LAST_EVENT=`echo $LAST_MESSAGE | cut -d ':' -f 5 | cut -d ' ' -f 1`
 
-  if echo $LAST_CAM | grep -n1 $CAM1_ID; then
+  if echo $LAST_CAM | grep $CAM1_ID; then
     # Camera 1 triggered
 	  if [[ $LAST_EVENT == "start" ]]; then
 	    echo "Motion started on $CAM1_NAME"
